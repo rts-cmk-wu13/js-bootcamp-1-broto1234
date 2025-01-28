@@ -13,11 +13,26 @@ let quotesList = [
   "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character. - Martin Luther King"
 ]
 
+let quoteRandom = Math.floor(Math.random() * quotesList.length);
 
 function showQuote() {
-
-  let quoteRandom = Math.floor(Math.random() * quotesList.length);
     quote.textContent = quotesList[quoteRandom];
 }
+
 showQuote();
 
+
+// The Math.random() static method returns a floating-point that's greater than or equal to 0 and less than 1
+
+// The Math.floor() method rounds a number DOWN to the nearest integer. The Math.floor() static method always rounds down and returns the largest integer less than or equal to a given number.
+//Math.floor(5.95) # 5;  Math.floor(5.05)  # 5;  Math.floor(5)   #5; Math.floor(-5.05)  # -6
+
+
+// Example:
+//  quotesList.length = 2
+// Math.random() * quotesList.length = Math.random() * 2 = 0.4 * 2 = 0.8
+// Math.floor(Math.random() * quotesList.length) = Math.floor(0.8) = 0
+
+//  quotesList.length = 4
+// Math.random() * quotesList.length = Math.random() * 4 = 0.6 * 4 = 2.4
+// Math.floor(Math.random() * quotesList.length) = Math.floor(2.4) = 2
